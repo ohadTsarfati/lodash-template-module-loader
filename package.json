@@ -1,0 +1,21 @@
+{
+  "name": "lodash-template-loader",
+  "version": "0.0.1",
+  "description": "simple lodash templates loader for webpack, with the possibility to export as ES6 module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lodash",
+    "templates",
+    "loader",
+    "webpack"
+  ],
+  "author": "Ohad Tsarfati",
+  "license": "ISC",
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "lodash": "^4.17.11"
+  }
+}
