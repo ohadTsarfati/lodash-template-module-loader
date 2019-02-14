@@ -1,14 +1,15 @@
 {
-  "name": "lodash--compiled-template-loader",
+  "name": "lodash-template-module-loader",
   "version": "0.0.1",
-  "description": "simple lodash templates loader for webpack",
+  "description": "simple lodash templates, generated as ES modules, loader for webpack",
   "main": "index.js",
   "scripts": {},
   "keywords": [
     "lodash",
     "templates",
     "loader",
-    "webpack"
+    "webpack",
+    "es-module"
   ],
   "author": "Ohad Tsarfati",
   "license": "ISC",
