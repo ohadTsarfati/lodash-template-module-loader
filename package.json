@@ -1,8 +1,12 @@
 {
   "name": "lodash-template-module-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "simple lodash templates loader for webpack, generated as ES modules",
   "main": "index.js",
+  "homepage": "https://github.com/ohadTsarfati/lodash-template-module-loader",
+  "bugs": {
+    "url": "https://github.com/ohadTsarfati/lodash-template-module-loader/issues"
+  },
   "scripts": {},
   "keywords": [
     "lodash",
@@ -11,7 +15,14 @@
     "webpack",
     "es-module"
   ],
-  "author": "Ohad Tsarfati",
+  "author": {
+    "name": "Ohad Tsarfati",
+    "email": "ohad.tsarfati@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ohadTsarfati/lodash-template-module-loader.git"
+  },  
   "license": "MIT",
   "dependencies": {
     "loader-utils": "^1.1.0",
