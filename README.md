@@ -14,14 +14,16 @@ Set up the loader in your webpack configuration:
 module.exports = {
     //...
     module: {
-        loaders: [{
-            test: /(\.tpl\.html)$/,
-            loader: 'lodash-compiled-template-webpack',
-            options: {
-                ...
-                ...
+        rules: [
+            {
+                test: /(\.tpl\.html)$/,
+                loader: 'lodash-compiled-template-webpack',
+                options: {
+                   // ...
+                   // ...
+                }
             }
-        }],
+        ]
     }
 };
 ```
@@ -80,14 +82,16 @@ It is possible to specify a module to use for imports. `importsModulePath` lets 
 module.exports = {
     // ...
     module: {
-        loaders: [{
-            test: /(\.tpl\.html)$/,
-            loader: 'lodash-compiled-template-webpack',
-            options: {
-                importsModulePath: path.join(__dirname, 'template-imports'),
-                // ...
+        rules: [
+            {
+                test: /(\.tpl\.html)$/,
+                loader: 'lodash-compiled-template-webpack',
+                options: {
+                    importsModulePath: path.join(__dirname, 'template-imports'),
+                    // ...
+                }
             }
-        }],
+        ]
     },
     // ...
 };
@@ -123,16 +127,18 @@ You can modify the regular expressions that Lodash uses for [`interpolate`](http
 module.exports = {
     // ...
     module: {
-        loaders: [{
-            test: /(\.tpl\.html)$/,
-            loader: 'lodash-compiled-template-webpack',
-            options: {
-                escape: /\{\{(.+?)\}\}/g,
-                evaluate: /\{%([\s\S]+?)%\}/g,
-                interpolate: /\{\\[(.+?)\\]\\}/g,
-                //...
+        rules: [
+            {
+                test: /(\.tpl\.html)$/,
+                loader: 'lodash-compiled-template-webpack',
+                options: {
+                    escape: /\{\{(.+?)\}\}/g,
+                    evaluate: /\{%([\s\S]+?)%\}/g,
+                    interpolate: /\{\\[(.+?)\\]\\}/g,
+                    //...
+                }
             }
-        }],
+        ]
     },
     // ...
 };
@@ -144,14 +150,16 @@ You can also specify the [`variable`](https://lodash.com/docs#templateSettings-v
 module.exports = {
     // ...
     module: {
-        loaders: [{
-            test: /(\.tpl\.html)$/,
-            loader: 'lodash-compiled-template-webpack',
-            options: {
-                variable: 'data',
-                // ...
+        rules: [
+            {
+                test: /(\.tpl\.html)$/,
+                loader: 'lodash-compiled-template-webpack',
+                options: {
+                    variable: 'data',
+                    // ...
+                }
             }
-        }],
+        ]
     },
     // ...
 };
@@ -182,14 +190,16 @@ When debugging using DevTools, it can be hard to find the template in the Elemen
 module.exports = {
     // ...
     module: {
-        loaders: [{
-            test: /(\.tpl\.html)$/,
-            loader: 'lodash-compiled-template-webpack',
-            options: {
-                prependFilenameComment: process.cwd(),
-                // ...
+        rules: [
+            {
+                test: /(\.tpl\.html)$/,
+                loader: 'lodash-compiled-template-webpack',
+                options: {
+                    prependFilenameComment: process.cwd(),
+                    // ...
+                }
             }
-        }],
+        ]
     },
     // ...
 };
