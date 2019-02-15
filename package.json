@@ -1,7 +1,7 @@
 {
   "name": "lodash-template-module-loader",
-  "version": "0.0.1",
-  "description": "simple lodash templates, generated as ES modules, loader for webpack",
+  "version": "0.1.0",
+  "description": "simple lodash templates loader for webpack, generated as ES modules",
   "main": "index.js",
   "scripts": {},
   "keywords": [
@@ -12,7 +12,7 @@
     "es-module"
   ],
   "author": "Ohad Tsarfati",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.11"

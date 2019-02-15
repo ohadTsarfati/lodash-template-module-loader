@@ -38,7 +38,7 @@ module.exports = function(source) {
   _.templateSettings = _.defaults({}, _.chain(options).
     pick(['interpolate', 'escape', 'evaluate']).
     reduce((reduction, val, key) => {
-      reduction[key] = new RegExp(val, 'g');
+      reduction[key] = _.isRegExp(val) ? val : new RegExp(val, 'g');
       return reduction;
     }, {}).
     value(),
