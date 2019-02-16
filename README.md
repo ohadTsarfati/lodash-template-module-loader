@@ -17,7 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.tpl\.html)$/,
-                loader: 'lodash-compiled-template-webpack',
+                loader: 'lodash-template-module-loader',
                 options: {
                    // ...
                    // ...
@@ -85,7 +85,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.tpl\.html)$/,
-                loader: 'lodash-compiled-template-webpack',
+                loader: 'lodash-template-module-loader',
                 options: {
                     importsModulePath: path.join(__dirname, 'template-imports'),
                     // ...
@@ -130,7 +130,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.tpl\.html)$/,
-                loader: 'lodash-compiled-template-webpack',
+                loader: 'lodash-template-module-loader',
                 options: {
                     escape: /\{\{(.+?)\}\}/g,
                     evaluate: /\{%([\s\S]+?)%\}/g,
@@ -153,7 +153,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.tpl\.html)$/,
-                loader: 'lodash-compiled-template-webpack',
+                loader: 'lodash-template-module-loader',
                 options: {
                     variable: 'data',
                     // ...
@@ -193,7 +193,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.tpl\.html)$/,
-                loader: 'lodash-compiled-template-webpack',
+                loader: 'lodash-template-module-loader',
                 options: {
                     prependFilenameComment: process.cwd(),
                     // ...

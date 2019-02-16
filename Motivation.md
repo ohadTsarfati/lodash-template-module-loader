@@ -1,5 +1,5 @@
 # Motivation
-This loader's purpose, other than creating compiled lodash templates, is to assist webpack (combined with certain loaders, described below) to effectively perform tree shaking for lodash methods.
+This loader's purpose, other than creating compiled lodash templates, is to assist webpack (with the loaders described below) to effectively perform tree shaking for lodash methods.
 
 In order to reach the smallest bundle size when using lodash, blazemeter recommands in [this blog post](https://www.blazemeter.com/blog/the-correct-way-to-import-lodash-libraries-a-benchmark) to use [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash) with [lodash-webpack-plugin](https://github.com/lodash/lodash-webpack-plugin).
 
@@ -20,7 +20,7 @@ module.exports = {
                 use: [
                 'babel-loader', /* adding 'babel-loader' to the loaders chain */
                 {
-                    loader: path.resolve('./webpack/template-loader/index.js'),
+                    loader: 'lodash-template-module-loader',
                     options: {
                         // ...
                     },
