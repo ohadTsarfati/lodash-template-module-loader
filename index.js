@@ -1,8 +1,13 @@
 const path = require('path');
 
-const _ = require('lodash');
-const lodaerUtils = require('loader-utils');
+let _;
+try {
+  _ = require('lodash');
+} catch(error) {
+  _ = require('underscore')
+}
 
+const loaderUtils = require('loader-utils');
 
 const defaultOptions = {
   // interpolate: _.templateSettings.interpolate,
@@ -16,17 +21,16 @@ const defaultOptions = {
   globalEngine: false,
 };
 
-
 module.exports = function(source) {
   let template = source;
-  const modulePieces = [];
-  // Caching
+  
+  // caching
   this.cacheable && this.cacheable();
 
-  // Getting user options
-  const userPref = lodaerUtils.getOptions(this);
+  // get user options
+  const userPref = loaderUtils.getOptions(this);
 
-  // Aggrgating the options
+  // aggrgate the options
   const options = _.defaults(
     {},
     userPref,
@@ -54,11 +58,16 @@ module.exports = function(source) {
     engine,
   } = options;
 
+  const modulePieces = [];
 
+  // import engine if not global
   if (!globalEngine) {
     modulePieces.push(`import _ from '${engine}';`);
   }
+  
+  // importing imports module
   if (!_.isEmpty(importsModulePath)) {
+    this.addDependency(path.resolve(importsModulePath));
     modulePieces.push(`import ${importsName}Default, * as ${importsName} from '${importsModulePath}';`)
   }
 
