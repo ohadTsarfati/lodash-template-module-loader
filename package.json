@@ -1,6 +1,6 @@
 {
   "name": "lodash-template-module-loader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "simple lodash templates loader for webpack, generated as ES modules",
   "main": "index.js",
   "homepage": "https://github.com/ohadTsarfati/lodash-template-module-loader",
